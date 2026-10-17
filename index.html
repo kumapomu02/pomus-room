@@ -164,17 +164,91 @@
   text-decoration: none;
 }
 
+/* Navigation Menu */
+.site-nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px auto 28px;
+}
+
+.site-nav a {
+  display: inline-block;
+  padding: 9px 18px;
+  background-color: #f5e9dc;
+  color: #795c49;
+  border: 1px solid #eadccd;
+  border-radius: 999px;
+  text-decoration: none;
+  font-size: 13px;
+  letter-spacing: 1px;
+  transition: background-color 0.2s ease;
+}
+
+.site-nav a:hover {
+  background-color: #ead8c5;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+section[id] {
+  scroll-margin-top: 20px;
+}
+
+/* Tiny hand-drawn decorations */
+.header-decor {
+  color: #b89b83;
+  font-size: 17px;
+  letter-spacing: 2px;
+  margin-bottom: 0;
+  opacity: 0.85;
+}
+
+.header-decor svg {
+  width: 220px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
   </style>
 </head>
 
-<body>
+<body id="home">
 
   <header>
+
+<div class="header-decor" aria-hidden="true">
+  <svg viewBox="0 0 220 24" xmlns="http://www.w3.org/2000/svg">
+    <g fill="none" stroke="#b89b83" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M25 12 C21 6 15 8 19 12 C13 14 17 20 22 15 C24 21 30 18 26 14 C33 14 31 8 25 12Z"/>
+      <circle cx="24" cy="13" r="1.5" fill="#b89b83" stroke="none"/>
+      <path d="M82 5 L85 10 L91 11 L86 15 L87 21 L82 18 L77 21 L78 15 L73 11 L79 10Z"/>
+      <path d="M110 10 C110 4 118 4 120 10 C122 4 130 4 130 10 C130 15 120 20 120 20 C120 20 110 15 110 10Z"/>
+      <path d="M190 12 C186 6 180 8 184 12 C178 14 182 20 187 15 C189 21 195 18 191 14 C198 14 196 8 190 12Z"/>
+      <circle cx="189" cy="13" r="1.5" fill="#b89b83" stroke="none"/>
+      <path d="M54 13 L56 16 L59 17 L56 18 L54 21 L53 18 L50 17 L53 16Z"/>
+      <path d="M164 5 L165 8 L168 9 L165 10 L164 13 L163 10 L160 9 L163 8Z"/>
+    </g>
+  </svg>
+</div>
+
     <h1>POMU’S ROOM ✦</h1>
     <p class="subtitle">My Little Hamster ♡</p>
     <p>Djungarian hamster &amp; little explorer 🐹</p>
     <img class="pom-photo" src="IMG_4754.jpg" alt="ポムちゃん">
   </header>
+
+<nav class="site-nav">
+  <a href="#home">HOME</a>
+  <a href="#diary">DIARY</a>
+  <a href="#album">ALBUM</a>
+  <a href="#owner">OWNER</a>
+</nav>
 
   <main>
     <section class="card">
@@ -187,7 +261,7 @@
       </ul>
     </section>
 
-    <section class="card">
+    <section class="card" id="diary">
       <h2>♡ GROWTH DIARY</h2>
       <p>Welcome to Pom's little diary!</p>
       <p>My everyday life with Pom 🐹</p>
@@ -200,7 +274,7 @@
 </article>
     </section>
 
-    <section class="card">
+    <section class="card" id="album">
   <h2>📸 POMU'S PHOTO ALBUM</h2>
   <p>ポムちゃん可愛いすぎるよ展</p>
 
@@ -229,7 +303,7 @@
     Made with love for Pom ♡
   </footer>
   
-  <section class="card owner-section">
+  <section class="card owner-section" id="owner">
   <h2>ABOUT THE OWNER</h2>
 
   <div class="owner-profile">
