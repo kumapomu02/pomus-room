@@ -114,6 +114,49 @@
   margin-top: 8px;
 }
 
+/* Owner Profile */
+.owner-profile {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 20px;
+  padding: 16px;
+  background: #fffaf3;
+  border-radius: 18px;
+}
+
+.owner-photo {
+  width: 100px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 14px;
+  flex-shrink: 0;
+}
+
+.owner-message {
+  position: relative;
+  padding: 14px;
+  background: white;
+  border: 1px solid #eadccd;
+  border-radius: 16px;
+  color: #6b5143;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.owner-message::before {
+  content: "";
+  position: absolute;
+  left: -7px;
+  top: 24px;
+  width: 12px;
+  height: 12px;
+  background: white;
+  border-left: 1px solid #eadccd;
+  border-bottom: 1px solid #eadccd;
+  transform: rotate(45deg);
+}
+
   </style>
 </head>
 
@@ -178,6 +221,26 @@
   <footer>
     Made with love for Pom ♡
   </footer>
+  
+  <section class="card owner-section">
+  <h2>ABOUT THE OWNER</h2>
+
+  <div class="owner-profile">
+    <img src="owner.jpg" alt="飼い主の分身" class="owner-photo">
+
+    <div class="owner-message">
+      <p>Wedデザインの練習で作りました。<br>
+      温かい目で見守って頂けると嬉しいです💭</p>
+    </div>
+  </div>
+
+  <a class="instagram-link"
+     href="https://www.instagram.com/02pomu/"
+     target="_blank"
+     rel="noopener noreferrer">
+    📷 Instagram @02pomu ↗
+  </a>
+</section>
 
 </body>
 </html>
