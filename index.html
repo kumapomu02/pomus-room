@@ -15,9 +15,11 @@
   display: block;
   width: 280px;
   max-width: 100%;
-  height: auto;
+  aspect-ratio: 1 / 1;
+object-fit: contain;
   border-radius: 24px;
   margin: 10px auto 0px;
+}
 
   .diary-photo {
   display: block;
@@ -28,17 +30,12 @@
   margin: 24px auto;
 }
 
-  -webkit-mask-image: radial-gradient(
-  ellipse closest-side,
-  black 65%,
-  transparent 100%
-);
-mask-image: radial-gradient(
-  ellipse closest-side,
-  black 65%,
-  transparent 100%
-);
-
+.site-logo {
+  display: block;
+  width: 100%;
+  max-width:500px;
+  height: auto;
+  margin: 0 auto 10px;
 }
 
     body {
@@ -260,9 +257,11 @@ section[id] {
   </svg>
 </div>
 
-    <h1>𝙋𝙊𝙈𝙐'𝙎 𝙍𝙊𝙊𝙈 ✦</h1>
-    <p class="subtitle">𝘔𝘺 𝘓𝘪𝘵𝘵𝘭𝘦 𝘏𝘢𝘮𝘴𝘵𝘦𝘳.</p>
-    <p>Djungarian hamster & little explorer 🐹</p>
+  <img
+  class="site-logo"
+  src="pomus-logo.png"
+  alt="POMU'S ROOM - My Little Hamster."
+>
     <img class="pom-photo" src="IMG_4754.jpg" alt="ポムちゃん">
   </header>
 
