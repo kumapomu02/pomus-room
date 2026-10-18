@@ -236,6 +236,37 @@ section[id] {
   margin: 0 auto;
 }
 
+.social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 22px;
+  margin: 20px auto;
+}
+
+.social-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  color: #795c49;
+  background: #f5e9dc;
+  border-radius: 50%;
+  transition: background-color 0.2s ease,
+              transform 0.2s ease;
+}
+
+.social-icons a:hover {
+  background: #ead8c5;
+  transform: translateY(-2px);
+}
+
+.social-icons svg {
+  width: 22px;
+  height: 22px;
+}
+
   </style>
 </head>
 
@@ -337,19 +368,32 @@ section[id] {
     </div>
   </div>
 
-  <a class="instagram-link"
-     href="https://www.instagram.com/02pomu/"
+  <div class="social-icons">
+  <a href="https://www.instagram.com/02pomu/"
      target="_blank"
-     rel="noopener noreferrer">
-    📷 Instagram @02pomu ↗
+     rel="noopener noreferrer"
+     aria-label="Instagram">
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <rect x="3" y="3" width="18" height="18" rx="5"
+            fill="none" stroke="currentColor" stroke-width="1.8"/>
+      <circle cx="12" cy="12" r="4"
+              fill="none" stroke="currentColor" stroke-width="1.8"/>
+      <circle cx="17.5" cy="6.8" r="1.2" fill="currentColor"/>
+    </svg>
   </a>
 
-  <a class="instagram-link"
-   href="https://x.com/02_2_6"
-   target="_blank"
-   rel="noopener noreferrer">
-  𝕏  @02_2_6 ↗
-</a>
+  <a href="https://x.com/02_2_6"
+     target="_blank"
+     rel="noopener noreferrer"
+     aria-label="X">
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M4 3h4.5l11.5 18h-4.5L4 3z
+               M20 3h-4L4 21h4L20 3z"
+            fill="currentColor"/>
+    </svg>
+  </a>
+</div>
+
 </section>
 
 </body>
