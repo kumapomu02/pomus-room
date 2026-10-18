@@ -17,7 +17,28 @@
   max-width: 100%;
   height: auto;
   border-radius: 24px;
+  margin: 10px auto 0px;
+
+  .diary-photo {
+  display: block;
+  width: 100px !important;
+  max-width: 100%;
+  height: auto;
+  border-radius: 24px;
   margin: 24px auto;
+}
+
+  -webkit-mask-image: radial-gradient(
+  ellipse closest-side,
+  black 65%,
+  transparent 100%
+);
+mask-image: radial-gradient(
+  ellipse closest-side,
+  black 65%,
+  transparent 100%
+);
+
 }
 
     body {
@@ -38,10 +59,12 @@
       color: #B38A6D;
       font-size: 32px;
       letter-spacing: 2px;
+      margin-bottom: 8px;
     }
 
     .subtitle {
-      margin-bottom: 10px;
+      margin-top: 8px;
+      margin-bottom: -10px;
     }
 
     .card {
@@ -237,9 +260,9 @@ section[id] {
   </svg>
 </div>
 
-    <h1>POMU’S ROOM ✦</h1>
-    <p class="subtitle">My Little Hamster ♡</p>
-    <p>Djungarian hamster &amp; little explorer 🐹</p>
+    <h1>𝙋𝙊𝙈𝙐'𝙎 𝙍𝙊𝙊𝙈 ✦</h1>
+    <p class="subtitle">𝘔𝘺 𝘓𝘪𝘵𝘵𝘭𝘦 𝘏𝘢𝘮𝘴𝘵𝘦𝘳.</p>
+    <p>Djungarian hamster & little explorer 🐹</p>
     <img class="pom-photo" src="IMG_4754.jpg" alt="ポムちゃん">
   </header>
 
@@ -268,7 +291,11 @@ section[id] {
       <article class="diary-entry">
   <h3>🐹 ポムちゃんのそっくりさん</h3>
   <p class="diary-date">2026.10.17</p>
-  <img class="pom-photo" src="IMG_5610.JPG" alt="ポムちゃん">
+  <img
+  src="IMG_5610.JPG"
+  alt="ポムちゃん"
+  style="width: 280px; max-width: 100%; height: auto; display: block; margin: 24px auto; border-radius: 24px;"
+>
   <p>ハムスターもなかとポムちゃん🌼<br>京都駅のお土産屋さんで発見！<br>（飼い主が美味しく頂きました）</p>
 
 </article>
