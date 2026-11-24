@@ -267,7 +267,99 @@ section[id] {
   height: 22px;
 }
 
+
+.like-area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 12px 0;
+}
+
+.like-button {
+  border: 1px solid #f0d9bc;
+  border-radius: 999px;
+  background: #fff4e8;
+  color: #8b6247;
+  padding: 10px 18px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 3px 0 #ead4bd;
+  transition: transform 0.15s, background 0.2s;
+}
+
+.like-button:hover {
+  background: #ffe9ee;
+}
+
+.like-button:active {
+  transform: translateY(3px);
+  box-shadow: none;
+}
+
+.like-button.pop {
+  animation: likePop 0.3s ease;
+}
+
+@keyframes likePop {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.12); }
+  100% { transform: scale(1); }
+}
+
+.like-count {
+  color: #8b7464;
+  font-size: 14px;
+}
+
+#likeMessage {
+  text-align: center;
+  color: #c78394;
+  font-size: 14px;
+  min-height: 1.5em;
+}
+
+
+.like-button {
+  position: relative;
+  overflow: visible;
+}
+
+.floating-heart {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  pointer-events: none;
+  font-size: 22px;
+  animation: heartFloat 1s ease-out forwards;
+}
+
+@keyframes heartFloat {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, 0) scale(0.6);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translate(10px, -30px) scale(1.2);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(30px, -65px) scale(0.8);
+  }
+}
+
+
+
+
   </style>
+
+<link rel="stylesheet" href="style.css">
+
 </head>
 
 <body id="home">
@@ -362,9 +454,37 @@ section[id] {
      type="video/quicktime">
     </video>
 
+    
+<div class="like-area">
+  <button id="pomuLike" class="like-button">
+     🍮 かわいい！
+  </button>
+
+  <span class="like-count">
+    <span id="likeCount">0</span>回
+  </span>
+
+</div>
+ <p id="likeMessage" aria-live="polite"></p>
+
+
 </article>
 
+<articke class="diary-entry">
+   <h3>🐹 ボーっと</h3>
+     <p class="diary-date">2026.11.24</p>
 
+     <img
+      src="IMG_1124.JPG"
+      alt="呆然ポム"
+      style="width: 280px; max-width: 100%; height: auto;"
+      >
+
+      <p>
+        最近ぼ〜っとしてる 💭
+      </p>
+      
+</articke>
 
 
     </section>
@@ -448,5 +568,6 @@ section[id] {
 
 </section>
 
+<script src="./script.js"></script>
 </body>
 </html>
